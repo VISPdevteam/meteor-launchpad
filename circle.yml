@@ -13,6 +13,5 @@ test:
 deployment:
   hub:
     branch: master
-    owner: vispdevteam
     commands:
       - ./ci-build.sh
