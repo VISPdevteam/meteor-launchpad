@@ -1,4 +1,4 @@
-[![Circle CI](https://circleci.com/gh/jshimko/meteor-launchpad/tree/master.svg?style=svg)](https://circleci.com/gh/jshimko/meteor-launchpad/tree/master)
+[![CircleCI](https://circleci.com/gh/VISPdevteam/meteor-launchpad.svg?style=shield)](https://circleci.com/gh/VISPdevteam/meteor-launchpad)
 # Meteor Launchpad - Base Docker Image for Meteor Apps
 
 ### Build
@@ -6,7 +6,7 @@
 Add the following to a `Dockerfile` in the root of your app:
 
 ```Dockerfile
-FROM jvallarvisp/meteor-launchpad:latest
+FROM vispdevteam/meteor-launchpad:latest
 ```
 
 Then you can build the image with:
@@ -65,7 +65,7 @@ Note that having Mongo in the same container as your app is just for convenience
 You can optionally avoid downloading Meteor every time when building regularly in development.  Add the following to your Dockerfile instead...
 
 ```Dockerfile
-FROM jshimko/meteor-launchpad:devbuild
+FROM vispdevteam/meteor-launchpad:devbuild
 ```
 
 This isn't recommended for your final production build because it creates a much larger image, but it's a bit of a time saver when you're building often in development.  The first build you run will download/install Meteor and then every subsequent build will be able to skip that step and just build the app.
